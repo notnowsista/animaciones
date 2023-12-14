@@ -78,6 +78,13 @@ main{
     font-weight: bold;
 }
 
+.title-equipos{
+    margin-top: 20px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #FF5B4F;
+}
+
 .equipo{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -85,24 +92,45 @@ main{
 }
 
 .equipo img{
-    width: 200px;
-    height: 180px;
+    width: 100%;
+    display: block;
+    transition: filter 1.5s ease;
 }
 
 .card-equipo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
     margin-top: 20px;
-    color: #6f739e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
+.card-equipo p{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.card-equipo:hover img{
+    filter: brightness(30%);
+    transform: scale(1.5);
+
+}
+
+.card-equipo:hover p {
+    opacity: 1;
+    color: whitesmoke;
+    font-weight: bold;
+}
+/*
+
+.card-equipo p{
+    transform: translate(-50%, -50);
+}
+*/
 .servicios{
     margin-top: 20px;
-}
-
-.card-equipo span{
-    color: dimgrey;
 }
 
 .servicios span{
@@ -174,9 +202,10 @@ main{
 footer{
     grid-area: footer;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     background-color: #6f739e;
     color: whitesmoke;
+    padding: 10px;
 }
 
 .rrss{
@@ -192,12 +221,7 @@ footer{
 }
 
 .info{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    font-size: small;
+    display: none;
 }
 
 .contacto{
@@ -218,16 +242,23 @@ footer{
         "footer footer" 
         ;
     }
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+        opacity: 0.7;
+    }
 
     header{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+
     }
 
     header h1{
         font-size: 24px;
         margin-right: 10px;
+
     }
 
     nav{
@@ -254,6 +285,12 @@ footer{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
+        place-items: center;
+    }
+
+    .card-equipo img{
+        width: 300px;
+        height: 280px;
     }
 
     .servicios{
@@ -277,8 +314,13 @@ footer{
         font-size: large;
     }
 
+    .cada-terapia:hover{
+        transform: scale(2);
+    }
+
     footer{
         background-color: #34365c;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     footer small{
@@ -290,6 +332,15 @@ footer{
         flex-direction: row;
         gap: 10px;
         font-size: xx-large;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        font-size: small;
     }
 
     .horario{
