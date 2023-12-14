@@ -1,0 +1,210 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6f739e;
+    color: whitesmoke;
+}
+
+.title{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    font-size: medium;
+}
+
+header span{
+    font-size: xx-large;
+    padding: 10px;
+}
+
+nav{
+    display: none;
+}
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
+.bienvenida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bienvenida img{
+    width: 100%;
+}
+
+.texto-bienvenida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: dimgray;
+}
+
+.texto-bienvenida small{
+    color: #FF5B4F;
+    font-weight: bold;
+}
+.texto-bienvenida h2{
+    color: #6f739e;
+    font-weight: bolder;
+}
+
+.texto-bienvenida button{
+    padding: 10px;
+    background-color: #6f739e;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.equipo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.equipo img{
+    width: 200px;
+    height: 180px;
+}
+
+.card-equipo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: #6f739e;
+}
+
+.servicios{
+    margin-top: 20px;
+}
+
+.card-equipo span{
+    color: dimgrey;
+}
+
+.servicios span{
+    font-size: xx-large;
+    margin-top: 10px;
+}
+
+.servicios small{
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.card-servicios1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #FF5B4F;
+    color: whitesmoke;
+}
+
+.card-servicios2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #595d8f;
+    color: whitesmoke;
+}
+
+.card-servicios3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #3caf9e;
+    color: whitesmoke;
+}
+
+.texto-terapias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #6f739e;
+    font-weight: bolder;
+}
+
+.texto-terapias small{
+    color: #FF5B4F;
+}
+
+.cada-terapia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.7;
+}
+
+.lista-terapias{
+    text-align: center;
+    font-size: medium;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+}
+
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #6f739e;
+    color: whitesmoke;
+}
+
+.rrss{
+    display: flex;
+    flex-direction: column;s
+    justify-content: flex-start;
+    align-items: center;
+    font-size: medium;
+}
+
+.info h3{
+    margin: 0;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+}
